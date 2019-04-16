@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Exercice 2</title>
+</head>
+<body>
+  <div class="container-fluid text-center">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">Exercice 2 - Partie Bonus</h1>
+      </div>
+    </div>
+    <p>Phrase de test :</p>
+    <p id="test">En informatique, un logiciel est un ensemble de séquences d’instructions interprétables par une machine et d’un jeu de données nécessaires à ces opérations.</p>
+    <!-- Ajout du span vide pour l'affichage du résultat -->
+    <p>Lettre en 4ème position : <span id="l4"></span></p>
+    <p>Lettre en 10ème position : <span id="l10"></span></p>
+    <p>Lettre en 35ème position : <span id="l35"></span></p>
+    <p>Lettre en 59ème position : <span id="l59"></span></p>
+  </div>
+
+  <script>
+    // On récupère le texte du <p>
+    var str = document.getElementById('test').innerText;
+    // Et on affiche dans les span les caractères voulus
+    document.getElementById("l4").innerHTML = str.slice(3, 4);
+    document.getElementById("l10").innerHTML = str.slice(9, 10);
+    document.getElementById("l35").innerHTML = str.slice(34, 35);
+    document.getElementById("l59").innerHTML = str.slice(58, 59);
+  </script>
+</body>
+</html>
